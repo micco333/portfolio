@@ -1,0 +1,1155 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Noto Sans CJK JP"),
+         url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format('opentype');
+ }
+html{
+	font-size:62.5%;/*16px×62.5%=10px*/
+}
+body{
+	color:#666;
+    background-color: #fff;
+	font-family:'Noto Sans JP','メイリオ', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+	font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+	font-size: 1.4rem;
+	line-height: 1.4;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.inner{
+    width: 1000px;
+    margin: 0 auto;
+}
+img{
+	max-width:100%;
+	height: auto;
+	vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+.line_marker{
+    background: linear-gradient(left, transparent 50%, #f5c0c9 50%);
+    background: -webkit-linear-gradient(left, transparent 50%, #f5c0c9 50%);
+    background: -moz-linear-gradient(left, transparent 50%, #f5c0c9 50%);
+    background: -ms-linear-gradient(left, transparent 50%, #f5c0c9 50%);
+    background: -o-linear-gradient(left, transparent 50%, #f5c0c9 50%);
+    background-repeat: repeat-x;
+    background-size: 200% 0.4em;
+    background-position: 0 0.9em;
+    transition: all 2s ease;
+}
+.red{
+    color: #ab2239;
+}
+.sp-img{
+    display: none;
+}
+.sp_br{
+    display: none;
+}
+
+/*--------------------------pc版-------------------------------*/
+
+/*-----header-----*/
+.header{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.header_01{
+    opacity: 0;
+    animation: anime01 1.5s ease 1.5s;
+    -webkit-animation: anime01 1.5s ease 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 10;
+}
+.header_02{
+    opacity: 0;
+    animation: anime02 1.5s ease 2s;
+    -webkit-animation: anime02 1.5s ease 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 20;
+}
+@keyframes anime01{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes anime01{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes anime02{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes anime02{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.logo{
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: anime04 1s ease 3s;
+    animation-fill-mode: forwards;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -webkit-animation: anime04 1s ease 3s;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 30;
+}
+@keyframes anime04{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes anime04{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.risou{
+    position: absolute;
+    font-family: "Sawarabi Mincho";
+    color: #ab2239;
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 0 0 3px #fff;
+    top: 55%;
+    left: 25%;
+    white-space: nowrap;
+    animation: anime03 3s;
+    -webkit-animation: anime03 3s;
+    z-index: 40;
+}
+@keyframes anime03{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    70%{
+        opacity: 1;
+        transform: scale(1.2);
+        text-shadow: 0 0 10px #fff;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes anime03{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    70%{
+        opacity: 1;
+        transform: scale(1.2);
+        text-shadow: 0 0 10px #fff;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.ruikei{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    transform: rotate(-10deg);
+    transform-origin: top center;
+    animation: anime07 3s;
+    -webkit-transform: rotate(-10deg);
+    -webkit-transform-origin: top center;
+    -webkit-animation: anime07 3s;
+    z-index: 50;
+}
+@keyframes anime07{
+    0%{
+        opacity: 0;
+        transform: rotate(-10deg);
+    }
+    50%{
+        opacity: 0;
+        transform: rotate(-10deg);
+    }
+    70%{
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+    75%{
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+    80%{
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+    85%{
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+}
+@-webkit-keyframes anime07{
+    0%{
+        opacity: 0;
+        transform: rotate(-10deg);
+    }
+    50%{
+        opacity: 0;
+        transform: rotate(-10deg);
+    }
+    70%{
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+    75%{
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+    80%{
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+    85%{
+        opacity: 1;
+        transform: rotate(-5deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-10deg);
+    }
+}
+
+/*-----cart-----*/
+.cart_inner01{
+    padding: 60px 50px;
+    background-color: #ab2239;
+}
+.cart_inner02{
+    position: relative;
+    width: 900px;
+    height: 415px;
+    font-family: "Sawarabi Mincho";
+    text-align: right;
+    background-color: #fff;
+    border: double 3px #000;
+    background-image: url("../image/mc3_3.png");
+    background-repeat: no-repeat;
+    background-size: 430px;
+    background-position: 20px 20px;
+    padding: 30px 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.cart_1{
+    color: #000;
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+.line_marker.active{
+    background-position: -100% 0.9em;
+}
+.cart_2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.cart_3{
+    position: absolute;
+    color: #000;
+    background:repeating-linear-gradient(-45deg, #f5c0c9, #f5c0c9 4px, #fff 4px, #fff 8px);
+    width: 120px;
+    height: 80px;
+    left: 480px;
+    top: 178px;
+    border-top-left-radius: 60px 40px;
+    border-top-right-radius: 60px 40px;
+    border-bottom-right-radius: 60px 40px;
+    border-bottom-left-radius: 60px 40px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    font-size: 2rem;
+    transform: rotate(-10deg);
+    animation: anime05 1s infinite;
+    -webkit-transform: rotate(-10deg);
+    -webkit-animation: anime05 1s infinite;
+}
+@keyframes anime05{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+@-webkit-keyframes anime05{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+.cart_4{
+    position: absolute;
+    top: 215px;
+    right: 50px;
+}
+.cart_5{
+    position: absolute;
+    top: 220px;
+    right: 50px;
+    font-size: 2rem;
+}
+.cart_price{
+    font-size: 6rem;
+}
+.cart_in{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 400px;
+    height: 60px;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #ab2239;
+    text-align: center;
+    line-height: 60px;
+    animation: anime06 1.5s infinite;
+    -webkit-animation: anime06 1.5s infinite;
+}
+@keyframes anime06{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(3px);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes anime06{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(3px);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.cart_in a{
+    display: block;
+    color: #fff;
+}
+.cart_in a:hover{
+    width: 400px;
+    height: 60px;
+    color: #ab2239;
+    border: solid 2px #ab2239;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.cart_p{
+    display: flex;
+    position: absolute;
+    bottom: 18px;
+    right: 50px;
+    line-height: 1.4rem;
+}
+.cart_6{
+    font-size: 1.2rem;
+    color: #ab2239;
+    margin-right: 20px;
+    text-shadow: 0 0 3px #fff;
+    
+}
+.cart_7{
+    margin-right: 20px;
+}
+
+/*-----content 01-----*/
+.content01{
+    position: relative;
+    background-color: #E0E0E0;
+    padding: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.sita{
+    position: absolute;
+    top: -30px;
+    left: 48%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-color: transparent transparent #666 #666; 
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    z-index: 60;
+    box-sizing: border-box;
+}
+.text01{
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 50px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.text01_t{
+    font-size: 2rem;
+    color: #ab2239;
+    margin-bottom: 50px;
+}
+.line{
+    border-bottom: solid 1px;
+}
+.text01_p{
+    line-height: 2.3rem;
+}
+.text01_p p{
+    margin-bottom: 2rem;
+}
+
+/*-----content 02-----*/
+.content02{
+    margin: 50px auto;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+.content02_inner{
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+.content02_t{
+    font-family: "Sawarabi Mincho";
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.content02_card{
+    display: flex;
+    margin-right: -8px;
+}
+.section{
+    width: 33.333%;
+    margin-right: 8px;
+}
+.point{
+    font-size: 4rem;
+    margin-right: 10px;
+}
+.point::before{
+    display: block;
+    content: "Point";
+    font-size: 2rem;
+}
+.point_p{
+    height: 8rem;
+    padding: 0 8px;
+    text-align: left;
+}
+.point_i{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+    -webkit-transform: translateY(50px);
+    -webkit-transition: all 1s ease;
+}
+.point_i.show{
+    opacity: 1;
+    transform: none;
+    -webkit-transform: none;
+}
+
+/*-----content 03-----*/
+.content03{
+    background-color: #E0E0E0;
+    padding: 30px 0 50px;
+    margin: 0 auto;
+}
+.content03_t{
+    text-align: center;
+    font-family: "Sawarabi Mincho";
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.content03_ul{
+    width: 700px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.content03_li{
+    border-bottom: solid 1px #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+}
+.content03_li:last-of-type{
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.content03_com{
+    border-left: solid 5px #ab2239;
+    padding-left: 1rem;
+    margin-bottom: 0.8rem;
+    box-sizing: border-box;
+}
+.com{
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Sawarabi Mincho";
+}
+
+/*-----content 04-----*/
+.content04{
+    margin: 0 auto;
+}
+.content04_inner{
+    position: relative;
+}
+.content04_p{
+    position: absolute;
+    font-family: "Sawarabi Mincho";
+    font-size: 2.5rem;
+    top: 170px;
+    left: 30px;
+    text-align: right;
+    color: #ab2239;
+}
+
+/*-----content 05-----*/
+.content05_inner{
+    position: relative;
+}
+.content05_inner .ruikei{
+    position: absolute;
+    top: 20px;
+}
+.content05_p{
+    position: absolute;
+    bottom: 20px;
+    width: 1000px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    line-height: 9rem;
+    box-sizing: border-box;
+}
+.p_c{
+    color: #ab2239;
+    font-weight: bolder;
+}
+
+/*-----content 06-----*/
+.content06_inner{
+    position: relative;
+    height: 400px;
+    padding: 0 50px;
+    background-image: url("../image/model_4.png");
+    background-repeat: no-repeat;
+    background-position: bottom right 50px;
+}
+.use{
+    position: absolute;
+    width: 400px;
+    top: 80px;
+}
+.use_t{
+    display: block;
+    font-size: 2rem;
+    line-height: 4rem;
+    border-left: solid 5px #ab2239;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+.use_p{
+    line-height: 2;
+    text-indent: 1em;
+}
+
+/*-----content 07-----*/
+.content07{
+    padding: 50px 0px;
+    background-color: #e0e0e0;
+}
+.content07_inner{
+    width: 700px;
+    background-color: #fff;
+    padding: 30px 50px;
+    margin: 0 auto;
+}
+.content07_card{
+    border-bottom: solid 1px #666;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.content07_card:last-of-type{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.card_q{
+    display: flex;
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+.card_a{
+    display: flex;
+    line-height: 2rem;
+    padding-right: 10px;
+}
+.card_point{
+    font-size: 2rem;
+}
+
+/*-----footer-----*/
+.footer{
+    /*position: relative;
+    padding: 30px 0;
+    text-align: center;*/
+}
+.footer_p{
+    padding: 50px 60px 10px;
+    background-color: #e0e0e0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.btn-pageTop{
+    position: absolute;
+    display: block;
+    bottom: 60px;
+    right: 60px;
+}
+.btn-pageTop>a{
+    position: fixed;
+    display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    background-color: #ab2239;
+    overflow: hidden;
+    text-indent: 100%; /*width40pxの外に出す*/
+    white-space: nowrap; /*テキストを折り返さないようにする*/
+}
+.btn-pageTop>a::before{
+    position: absolute;
+    top:50%;
+    left: 0;
+    content: "\f077";
+    font-family: "Font Awesome 5 Free"; /*必ずこの記述*/
+    font-weight: 900; /*必ずこの記述*/
+    color: #fff;
+    transform: translate3d(0,-50%,0);
+    transition: all 0.2s;
+    -webkit-transform: translate3d(0,-50%,0);
+    -webkit-transition: all 0.2s;
+}
+.btn-pageTop>a:hover::before{
+    top:40%;
+}
+
+
+
+
+
+/*----------------------------sp版-----------------------------*/
+@media screen and (max-width: 640px){
+    
+    .inner{
+        width: 100%;
+    }
+    .pc-img{
+        display: none;
+    }
+    .sp-img{
+        display: block;
+    }
+    .pc_br{
+        display: none;
+    }
+    .sp_br{
+        display: block;
+    }
+    .line_marker{
+        background: linear-gradient(transparent 70%, #f5c0c9 50%);
+        background: -webkit-linear-gradient(transparent 70%, #f5c0c9 50%);
+        background: -moz-linear-gradient(transparent 70%, #f5c0c9 50%);
+        background: -ms-linear-gradient(transparent 70%, #f5c0c9 50%);
+        background: -o-linear-gradient(transparent 70%, #f5c0c9 50%);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: -10px;
+        transition: none;
+    }
+    
+    /*-----header-----*/
+    .header{
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+    }
+    .header_01{
+        width: 100%;
+        object-fit: contain;
+        opacity: 0;
+        animation: anime01 1s ease 1s;
+        animation-fill-mode: forwards;
+        -webkit-animation: anime01 1s ease 1s;
+        -webkit-animation-fill-mode: forwards;
+        z-index: 10;
+    }
+    .header_02{
+        width: 100%;
+        object-fit: contain;
+        opacity: 0;
+        animation: anime02 1s ease 1.5s;
+        animation-fill-mode: forwards;
+        -webkit-animation: anime02 1s ease 1.5s;
+        -webkit-animation-fill-mode: forwards;
+        z-index: 20;
+    }
+    @keyframes anime01{
+        0%{
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @-webkit-keyframes anime01{
+        0%{
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes anime02{
+        0%{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @-webkit-keyframes anime02{
+        0%{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .logo{
+        opacity: 0;
+        position: absolute;
+        width: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        animation: anime04 1s ease 2s;
+        animation-fill-mode: forwards;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -webkit-animation: anime04 1s ease 2s;
+        -webkit-animation-fill-mode: forwards;
+        z-index: 30;
+    }
+    @keyframes anime04{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes anime04{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .risou{
+        position: absolute;
+        font-family: "Sawarabi Mincho";
+        color: #ab2239;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        text-shadow: 0 0 3px #fff;
+        top: 28%;
+        margin: 0 auto;
+        white-space: nowrap;
+        animation: anime03 3s;
+        -webkit-animation: anime03 3s;
+        z-index: 40;
+    }
+    @keyframes anime03{
+        0%{
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    @-webkit-keyframes anime03{
+        0%{
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    .ruikei{
+        position: absolute;
+        top: 400px;
+        left: -5px;
+        transform: rotate(-10deg);
+        transform-origin: top center;
+        animation: anime07 3s;
+        -webkit-animation: anime07 3s;
+        z-index: 50;
+    }
+    @keyframes anime07{
+        0%{
+            opacity: 0;
+            transform: rotate(-10deg);
+        }
+        50%{
+            opacity: 0;
+            transform: rotate(-10deg);
+        }
+        70%{
+            opacity: 1;
+            transform: rotate(-10deg);
+        }
+        75%{
+            opacity: 1;
+            transform: rotate(-5deg);
+        }
+        80%{
+            opacity: 1;
+            transform: rotate(-10deg);
+        }
+        85%{
+            opacity: 1;
+            transform: rotate(-5deg);
+        }
+        100%{
+            opacity: 1;
+            transform: rotate(-10deg);
+        }
+    }
+    @-webkit-keyframes anime07{
+        0%{
+            opacity: 0;
+            transform: rotate(-10deg);
+        }
+        50%{
+            opacity: 0;
+            transform: rotate(-10deg);
+        }
+        70%{
+            opacity: 1;
+            transform: rotate(-10deg);
+        }
+        75%{
+            opacity: 1;
+            transform: rotate(-5deg);
+        }
+        80%{
+            opacity: 1;
+            transform: rotate(-10deg);
+        }
+        85%{
+            opacity: 1;
+            transform: rotate(-5deg);
+        }
+        100%{
+            opacity: 1;
+            transform: rotate(-10deg);
+        }
+    }
+    
+    /*-----cart-----*/
+    .cart_inner01{
+        padding: 30px 20px;
+    }
+    .cart_inner02{
+        position: relative;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        border: double 3px #000;
+        background-size: 360px;
+        background-position: -20px 20px;
+        padding: 20px 0px;
+        box-sizing: border-box;
+    }
+    .cart_1{
+        margin-bottom: 30px;
+    }
+    .cart_2{
+        font-size: 2rem;
+        text-shadow: 0 0 3px #fff;
+        margin-bottom: 30px;
+    }
+    .cart_3{
+        color: #000;
+        background:repeating-linear-gradient(-45deg, #f5c0c9, #f5c0c9 4px, #fff 4px, #fff 8px);
+        width: 100px;
+        height: 60px;
+        top: 190px;
+        left: 10px;
+        line-height: 60px;
+        font-size: 1.6rem;
+    }
+    .cart_4{
+        top: 240px;
+        right: 20px;
+        color: #000;
+        text-shadow: 0 0 3px #fff;
+        margin-bottom: 30px;
+    }
+    .cart_5{
+        top: 280px;
+        right: 10px;
+        font-size: 1.6rem;
+    }
+    .cart_price{
+        font-size: 4.5rem;
+    }
+    .cart_in{
+        top: 350px;
+        right: 15px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+    .cart_in a:hover{
+        width: 90%;
+        box-sizing: border-box;
+    }
+    .cart_p{
+        display: block;
+        bottom: 18px;
+        right: 0;
+        line-height: 1.4rem;
+        text-align: left;
+    }
+    
+    /*-----content 01-----*/
+    .content01{
+        padding: 30px 20px;
+    }
+    .sita{
+        left: 44%;
+    }
+    .text01{
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 30px 10px;
+    }
+
+
+    /*-----content 02-----*/
+    .content02_card{
+        display: block;
+        margin-right: 0;
+    }
+    .section{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .sec_inner{
+        margin-bottom: 10px;
+    }
+    .point{
+        margin-right: 0;
+    }
+    .point_p{
+        height: auto;
+        font-size: 1.6rem;
+    }
+    .point_i{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+    /*-----content 03-----*/
+    .content03{
+        padding: 20px 20px 30px;
+        box-sizing: border-box;
+    }
+    .content03_inner{
+        width: 100%;
+    }
+    .content03_t{
+        font-size: 2rem;
+    }
+    .content03_ul{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .content03_p{
+        font-size: 1.6rem;
+    }
+    
+    /*-----content 04-----*/
+    .content04_inner{
+        height: auto;
+    }
+    .content04_p{
+        top: 330px;
+        left: 20px;
+        text-align: right;
+    }
+    
+    /*-----content 05-----*/
+    .content05_inner{
+        position: relative;
+        width: 100%;
+    }
+    .content05_inner .ruikei{
+        top: 10px;
+    }
+    .content05_p{
+        bottom: 10px;
+        width: 100%;
+        padding: 0px 10px;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    
+    /*-----content 06-----*/
+    .content06_inner{
+        position: relative;
+        height: 450px;
+        padding: 0;
+        background-position: bottom left 100px;
+    }
+    .use{
+        width: 100%;
+        top: 70px;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+    .use_t{
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+    .use_p{
+        font-size: 1.6rem;
+        text-shadow: 0 0 3px #fff;
+    }
+    
+    /*-----content 07-----*/
+    .content07{
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+    .content07_inner{
+        width: 100%;
+        padding: 30px 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /*-----footer-----*/
+    .btn-pageTop{
+        display: none;
+    }
+    .footer_p{
+        padding: 40px 0px 10px;
+    }
+    
+    
+    
+    
+    
+    
+}

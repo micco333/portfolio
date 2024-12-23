@@ -1,0 +1,651 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-size:62.5%;/*16px×62.5%=10px*/
+}
+body{
+    color: #333;
+    background-color: #fff;
+    font-family: kozuka-gothic-pro, sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-feature-settings:  "palt";
+    letter-spacing: 0.1em;
+	font-size: 1.6rem;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    color: #333;
+    text-decoration: none;
+    transition: all .2s;    
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+a:hover{
+    opacity:0.5;
+}
+
+li{
+    list-style: none;
+}
+
+hr{
+    width: 90%;
+    margin: 1em auto;
+    height: 1px;
+    background-color: #362a83;
+    border: none;
+    color: #362a83;
+}
+p{
+    line-height: 1.8;
+}
+.h2{
+    font-family: toppan-bunkyu-gothic-pr6n, serif; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+.h3{
+    font-family: a-otf-jun-pro, sans-serif; 
+    font-weight: 600; 
+    font-style: normal;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+.red{
+    color: #ab2239;
+}
+.bold{
+    font-weight: bold;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+
+
+/*スマホ版*/
+
+/*--------------------
+*パララックス
+*--------------------*/
+.parallax {
+    height: 100vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.parallax.bg-01 {
+    background-image: url("../images/img01_s.jpg");
+}
+.parallax.bg-02 {
+    background-image: url("../images/img02_s.jpg");
+}
+.parallax.bg-03 {
+    background-image: url("../images/img03_s.jpg");
+}
+.parallax.bg-04 {
+    background-image: url("../images/img04_s.JPG");
+}
+.parallax.bg-05 {
+    background-image: url("../images/img05_s.jpg");
+}
+
+/*--------------------
+*hero
+*--------------------*/
+.hero{
+    position: relative;
+    height: 100vh;
+    background-image: url("../images/img01_s.jpg");
+    background-position: right bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+    box-sizing: border-box;
+    z-index: -1;
+}
+.logo{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    animation: anime01 2s;
+}
+@keyframes anime01{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+-webkit-@keyframes anime01{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/*--------------------
+*header
+*--------------------*/
+.header{
+    position: fixed;
+    position: -webkit-fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 100%;
+    height: 69px;
+    padding: 15px;
+    background-color: #362a83;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.header-inner{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+}
+.site-title{
+    width: 50px;
+}
+.aoki{
+    display: none;
+}
+.aoki2{
+    display: block;
+}
+
+/* nav */
+.header-nav{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: 30px;
+}
+.header-nav .sns{
+    color: #333;
+}
+.nav-list{
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.nav-list.list02{
+    display: none;
+}
+.pc_hyouji{
+    display: none;
+}
+.nav-item{
+    font-family: a-otf-jun-pro, sans-serif; 
+    font-weight: 300; 
+    font-style: normal;
+    box-sizing: border-box;
+}
+.nav-item>a{
+    color: #fff;
+    font-size:0.6rem;
+    text-transform: uppercase;
+}
+
+
+/*--------------------
+*main
+*--------------------*/
+.content{
+    padding: 50px 8px;
+    line-height: 1.4;
+    background-image: url("../images/1386555.jpg");
+}
+.comment{
+    margin-left: 4em;
+}
+.comment_hinnshu{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/* 店舗販売 */
+.content02{
+    margin-top: 69px;
+}
+.h2_02{
+    display: flex;
+    align-items: center;
+    padding: 200px 0;
+    margin-left: 1em;
+    animation: anime02 1s;
+}
+.h2_02::after{
+    content: "";
+    width: 30%;
+    height: 1px;
+    background: #333;
+    display: block;
+    margin-left: 0.8em;
+}
+@keyframes anime02{
+    0%{
+        opacity: 0;
+        transform: translateY(1em);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+-webkit-@keyframes anime02{
+    0%{
+        opacity: 0;
+        transform: translateY(1em);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.content02_inner{
+    margin-bottom: 3em;
+}
+.card{
+    position: relative;
+    height: 530px;
+}
+.photo01{
+    position: absolute;
+    display: block;
+    width: 90%;
+    left: 0;
+    z-index: 20;
+}
+.pc_hyouji{
+    display: none;
+}
+.photo02{
+    position: absolute;
+    display: block;
+    width: 90%;
+    right: 0;
+    z-index: 10;
+}
+.i_01{
+    height: 20em;
+    top: 150px;
+}
+.i_02{
+    height: 21em;
+    top: 150px;
+}
+.i_03{
+    height: 20em;
+    top: 150px;
+}
+.card_text{
+    position: absolute;
+    display: block;
+    top: 260px;
+    right: 10px;
+    z-index: 20;
+}
+.card_text>p{
+    line-height: 1.2;
+    margin-bottom: 1em;
+}
+.content02_shop{
+    right: 5%;
+    float: right;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.content02_shop a{
+    display: block;
+    padding: 8px 16px;
+}
+.content02_icon{
+    margin-left: 10px;
+}
+
+
+
+/*--------------------
+*fooer
+*--------------------*/
+.footer{
+    padding: 50px 0;
+    font-family: a-otf-jun-pro, sans-serif; 
+    font-weight: 300; 
+    font-style: normal;
+    color: #fff;
+    line-height: 2em;
+    background-color: #362a83;
+}
+.footer .sns{
+    color: #fff;
+}
+.add{
+    margin-bottom: 50px;
+}
+.link_inner{
+    margin-bottom: 30px;
+}
+.footer .link_inner>a{
+    color: #fff;
+}
+
+
+
+/*PC版*/
+@media screen and (min-width: 641px){
+    .br_sp{
+        display: none;
+    }
+    .pc_hyouji{
+        display: inline-block;
+    }
+        
+    /*--------------------
+    *パララックス
+    *--------------------*/
+    .parallax {
+        min-height: 700px;
+        background-attachment: fixed;
+        background-attachment: -webkit-fixed;
+    }
+    .parallax.bg-01 {
+        background-image: url("../images/img01.jpg");
+    }
+    .parallax.bg-02 {
+        background-image: url("../images/img02.jpg");
+    }
+    .parallax.bg-03 {
+        background-image: url("../images/img03.jpg");
+    }
+    .parallax.bg-04 {
+        background-image: url("../images/img04.jpg");
+    }
+    .parallax.bg-05 {
+        background-image: url("../images/img05.jpg");
+    }
+    
+    /*--------------------
+    *hero
+    *--------------------*/
+    .hero{
+        background-image: url("../images/img01.jpg");
+        background-position: center bottom;
+        background-attachment: fixed;
+        background-attachment: -webkit-fixed;
+        z-index: -1;
+    }
+    
+    /*--------------------
+    *header
+    *--------------------*/
+    .header{
+        position: static;
+        height: 64px;
+        padding: 0;
+        background-color: #fff;
+    }
+    .header.fix{
+        position: fixed;
+        position: -webkit-fixed;
+        top:0;
+        left:0;
+        width:100;
+        animation:nyuru 0.5s;
+    }
+    @keyframes nyuru {
+        0%{
+            margin-top:-64px;
+        }
+        100%{
+            margin-top:0;
+        }
+    }
+    -webkit-@keyframes nyuru {
+        0%{
+            margin-top:-64px;
+        }
+        100%{
+            margin-top:0;
+        }
+    }
+    .header-inner{
+        padding: 0 10px;
+    }
+    .site-title{
+        position: static;
+        width: 40px;
+        box-sizing: border-box;
+        padding: 12px 0;
+    }
+    
+    /* nav */
+    .header-nav{
+        position: static;
+        width: auto;
+    }
+    .navigation{
+        display: flex;
+        display: -webkit-flex;
+    }
+    .nav-list{
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        margin: 0 0 0 38px;
+    }
+    .nav-list.list02{
+        display: inline-flex;
+    }
+    .nav-item{
+        color: #626262;
+        margin: 0 0 0 30px;
+    }
+    .nav-item>a{
+        display: block;
+        box-sizing:border-box;
+        height: 62px;        
+        line-height: 62px;
+        color: #626262;
+        font-size: 1.4rem;
+    }
+    .nav-item.current>a{
+        color:#aaa;
+        border-bottom:solid 2px #aaa;
+    }
+    .nav-item:first-child{
+        margin-left: 0;
+    }
+
+    
+    /*--------------------
+    *main
+    *--------------------*/
+    .content{
+        padding: 100px 0;
+    }
+    .comment>.inner{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .comment_hinshu>.inner{
+        width: 700px;
+        margin: 0 auto;
+    }
+    
+    /* 店舗販売 */
+    .content02{
+        margin: 0 auto;
+    }
+    .content02_inner{
+        margin-bottom: 70px;
+        box-sizing: border-box;
+    }
+    .h3_02 {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid;
+        padding: 5px;
+        margin-bottom: 50px;
+    }
+    .h3_02::after {
+        content: '';
+        position: absolute;
+        top: 130px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        height: 100px;
+        margin: auto;
+        background-color: #000;
+    }
+    .card{
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .photo01{
+        position: static;
+        width: 100%;
+        height: auto;
+        left: 0;
+    }
+    .sp_hyouji{
+        display: none;
+    }
+    .photo02{
+        display: none;
+    }
+    .card_text{
+        position: static;
+        display: block;
+        background-image: url("../images/1386555.jpg");
+        padding: 50px 0;
+        margin: 0;
+    }
+    .card_text>p{
+        line-height: 1.4;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .content02_shop{
+        display: none;
+    }
+
+    
+    
+    /*--------------------
+    *footer
+    *--------------------*/
+    .add{
+        margin-bottom: 20px;
+    }
+    .link{
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+    .link_inner{
+        margin-right: 2em;
+        margin-bottom: 0;
+    }
+
+
+
+    
+
+    /*--------------------
+    *topへ戻る
+    *--------------------*/
+    .btn-pageTop{
+        position: absolute;
+        display: block;
+        bottom: 60px;
+        right: 60px;
+    }
+    .btn-pageTop>a{
+        position: fixed;
+        position: -webkit-fixed;
+        display: block;
+        width: 40px;
+        height: 40px;
+        opacity: 0.6;
+        background-color: #362a83;
+        overflow: hidden;
+        text-indent: 100%; /*width40pxの外に出す*/
+        white-space: nowrap; /*テキストを折り返さないようにする*/
+    }
+    .btn-pageTop>a::before{
+        position: absolute;
+        top:50%;
+        left: -5%;
+        content: "\f077";
+        font-family: "Font Awesome 5 Free"; /*必ずこの記述*/
+        font-weight: 900; /*必ずこの記述*/
+        color: #fff;
+        transform: translate3d(0,-50%,0);
+        transition: all 0.2s;
+        -webkit-transform: translate3d(0,-50%,0);
+        -webkit-transition: all 0.2s;
+    }
+    .btn-pageTop>a:hover::before{
+        top:40%;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
